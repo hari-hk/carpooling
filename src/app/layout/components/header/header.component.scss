@@ -1,0 +1,13 @@
+.tool-bar {
+  height: 50px;
+  background: blue;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .right-item {
+      p{
+          display: inline-block;
+      }
+  }
+}
