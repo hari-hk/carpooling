@@ -5,9 +5,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   .right-item {
-      p{
-          display: inline-block;
-      }
+    p {
+      display: inline-block;
+    }
+
+    img {
+      height: 30px;
+      width: 30px;
+      vertical-align: middle;
+      margin-right: 12px;
+      border-radius: 50%;
+      border: 2px solid;
+    }
   }
 }
