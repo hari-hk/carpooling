@@ -1,0 +1,50 @@
+<mat-grid-list cols="4" class="counts" rowHeight="150px">
+  <mat-grid-tile>
+    <mat-card class="top-card card-1">
+      <h1>User <span>86M</span></h1>
+      <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+      <p> A millions of happiness</p>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="top-card card-2">
+      <h1>Owner <span>36K</span></h1>
+      <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+      <p> Biilionary Profitors</p>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="top-card card-3">
+      <h1>Driver <span>49K</span></h1>
+      <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+      <p> Safe is festo</p>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="top-card card-4">
+      <h1>Cars <span>73K</span></h1>
+      <mat-progress-bar mode="determinate" value="86"></mat-progress-bar>
+      <p> Luxuary Entry with Luxary Cars</p>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="8" class="counts" rowHeight="350px">
+  <mat-grid-tile colspan="6">
+    <canvas baseChart [chartType]="'line'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"
+      [legend]="true" (chartClick)="onChartClick($event)">
+    </canvas>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2">
+    <div class="availability">
+      <mat-card class="a-card">
+        <h1>Availble Cars<span>700</span></h1>
+      </mat-card>
+      <mat-card class="a-card">
+        <h1>On-Ride Cars <span>600</span></h1>
+      </mat-card>
+      <mat-card class="a-card">
+        <h1>Off-Ride Cars <span>100</span></h1>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

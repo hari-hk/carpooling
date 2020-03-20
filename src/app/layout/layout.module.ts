@@ -7,7 +7,13 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MaterialModule } from '../shared/modules/material.module';
 
 const routes: Routes = [
-  { path: '', component: LayoutComponent }
+  {
+    path: '', component: LayoutComponent, children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', loadChildren: './pages/dashboard/dashboard.module#DashboardModule' },
+      { path: 'drivers', loadChildren: './pages/drivers/drivers.module#DriversModule' }
+    ]
+  }
 ]
 
 @NgModule({
