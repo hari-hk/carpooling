@@ -11,7 +11,9 @@ const routes: Routes = [
     path: '', component: LayoutComponent, children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: './pages/dashboard/dashboard.module#DashboardModule' },
-      { path: 'drivers', loadChildren: './pages/drivers/drivers.module#DriversModule' }
+      { path: 'drivers', loadChildren: './pages/drivers/drivers.module#DriversModule' },
+      { path: 'users', loadChildren: './pages/users/users.module#UsersModule' }
+
     ]
   }
 ]

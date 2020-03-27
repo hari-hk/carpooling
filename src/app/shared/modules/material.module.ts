@@ -34,6 +34,8 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 
 
@@ -75,7 +77,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
         MatTabsModule,
         MatTooltipModule,
         MatTreeModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatPaginatorModule
     ]
 })
 export class MaterialModule {}

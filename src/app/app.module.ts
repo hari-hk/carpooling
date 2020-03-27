@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material.module';
+import { CommonPopUpComponent } from './shared/component/common-popup/common-popup.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CommonPopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +19,7 @@ import { MaterialModule } from './shared/modules/material.module';
     MaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[CommonPopUpComponent]
 })
 export class AppModule { }

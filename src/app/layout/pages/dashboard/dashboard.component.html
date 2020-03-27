@@ -30,9 +30,10 @@
 </mat-grid-list>
 <mat-grid-list cols="8" class="counts" rowHeight="350px">
   <mat-grid-tile colspan="6">
-    <canvas baseChart [chartType]="'line'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"
+    <!-- <canvas baseChart [chartType]="'line'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"
       [legend]="true" (chartClick)="onChartClick($event)">
-    </canvas>
+    </canvas> -->
+    <button color="primary" (click)="openDialog()" mat-button><mat-icon>add</mat-icon> Add Ride</button>
   </mat-grid-tile>
   <mat-grid-tile colspan="2">
     <div class="availability">

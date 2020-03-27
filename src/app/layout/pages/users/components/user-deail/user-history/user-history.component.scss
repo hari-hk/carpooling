@@ -1,0 +1,61 @@
+    .cancelled {
+      border-right: 5px solid red;
+    }
+
+    .accepted {
+      border-right: 5px solid green;
+    }
+
+    mat-card {
+      border: 2px solid #eee;
+      margin-bottom: 11px;
+
+      p {
+        vertical-align: middle;
+      }
+
+      mat-icon {
+        vertical-align: middle;
+      }
+
+      .source {
+        mat-icon {
+          color: blue;
+        }
+      }
+
+      .destination {
+        mat-icon {
+          color: red;
+        }
+      }
+
+      .date {
+        text-align: center;
+        color: #7d7676;
+      }
+    }
+
+    .legends {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-size: 12px;
+        color: #716e6e;
+
+        span {
+          margin-right: 5px;
+          padding: 1px 8px;
+          border-radius: 50%;
+        }
+
+        .leg-can {
+          background: red;
+        }
+
+        .leg-succ {
+          background: green;
+        }
+      }
+    }

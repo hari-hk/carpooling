@@ -1,0 +1,79 @@
+.warpper {
+  .cols {
+    overflow-y: auto;
+    height: calc(100vh - 56px);
+  }
+
+  .b-style {
+    border-right: 1px solid #ccc;
+  }
+
+
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 6px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label {
+  width: 100%;
+  display: block;
+  margin: 10px 0 0 0;
+}
+
+
+.profile-pic {
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+}
+
+
+h1 {
+  text-align: center;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #585767;
+}
+
+.search-ride {
+  margin-top: 17px;
+  float: right;
+}
+
+.custom-row {
+  display: inline-flex;
+}
+
+.non-forms {
+  background: #f9f5f5;
+}
+
+.ride-details {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    color: green;
+    font-size: 16px;
+    margin: 15px;
+
+    span {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  }
+
+  .can {
+    color: red;
+
+  }
+}

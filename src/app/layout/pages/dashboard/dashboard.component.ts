@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { AddRideComponent } from '../add-ride/add-ride.component';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,11 +21,23 @@ export class DashboardComponent implements OnInit {
 
   chartLabels = ['January', 'February', 'Mars', 'April'];
 
-  constructor() { }
+  constructor(public dialog: MatDialog,
+    public router: Router) { }
 
   ngOnInit() {
   }
   onChartClick(event) {
     console.log(event);
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(AddRideComponent, {
+      width: '250px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed', result);
+      this.router.navigate(['./layout/users/detail']);
+    });
   }
 }
