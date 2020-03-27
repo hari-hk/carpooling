@@ -1,8 +1,8 @@
 <div class="container-fluid warpper">
   <div class="row custom-row">
     <div class="col-7 cols b-style">
-      <!-- <h1>Create User</h1> -->
-      <div class="ride-details">
+      <h1 *ngIf="!id">Create User</h1>
+      <div *ngIf="id" class="ride-details">
         <p><span>133</span> Total Ride</p>
         <p class="can"><span>10</span> Cancelled Ride</p>
       </div>
@@ -79,25 +79,31 @@
             <label for="pincode">Pincode</label>
             <input type="number" name="pincode" id="pincode">
           </div>
-          <!-- <div class="col-6"> <label for="rideCount">Total Ride Count</label>
-          <input type="number" id="rideCount" name="rideCount"></div>
-        <div class="col-6"><label for="cancelledRideCount">Cancelled Ride Count</label>
-          <input type="number" id="cancelledRideCount" name="cancelledRideCount"></div> -->
+        </div>
+        <div class="row footer-data">
+          <button *ngIf="id" class="delete" mat-button>Delete</button>
+          <button class="submit" mat-button>{{id?'Update':'Create'}}</button>
+          <button *ngIf="id" class="block" mat-button>Block</button>
         </div>
       </div>
 
     </div>
     <div class="col-5 non-forms cols">
-      <h1 *ngIf="!showDrivers">Ride History
-      </h1>
-      <h1 *ngIf="showDrivers">
-        <button mat-icon-button (click)="showDrivers=false">
-          <mat-icon>keyboard_backspace</mat-icon>
-        </button>
-        Available Drivers
-      </h1>
-      <app-user-history *ngIf="!showDrivers"></app-user-history>
-      <app-user-search-driver *ngIf="showDrivers"></app-user-search-driver>
+      <ng-container *ngIf="id; else newUser">
+        <h1 *ngIf="!showDrivers">Ride History
+        </h1>
+        <h1 *ngIf="showDrivers">
+          <button mat-icon-button (click)="showDrivers=false">
+            <mat-icon>keyboard_backspace</mat-icon>
+          </button>
+          Available Drivers
+        </h1>
+        <app-user-history *ngIf="!showDrivers"></app-user-history>
+        <app-user-search-driver *ngIf="showDrivers"></app-user-search-driver>
+      </ng-container>
+      <ng-template #newUser>
+        <h1 class="user-message"> Create New User</h1>
+      </ng-template>
     </div>
   </div>
 </div>

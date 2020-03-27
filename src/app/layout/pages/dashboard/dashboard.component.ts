@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { AddRideComponent } from '../add-ride/add-ride.component';
-import { RouterLink, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -37,7 +37,7 @@ export class DashboardComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed', result);
-      this.router.navigate(['./layout/users/detail']);
+      this.router.navigate(['./layout/users/detail/12']);
     });
   }
 }

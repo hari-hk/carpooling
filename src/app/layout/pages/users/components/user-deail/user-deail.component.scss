@@ -77,3 +77,22 @@ h1 {
 
   }
 }
+.footer-data{
+  margin:20px 5px;
+  display: flex;
+  justify-content: space-evenly;
+
+  .submit{
+    background: green;
+    color: #fff;
+  }
+  .delete{
+    background: red;
+    color: #fff;
+  }
+  .block{
+    background: black;
+    color: #fff;
+  }
+
+}

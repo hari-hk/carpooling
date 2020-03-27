@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-user-deail',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDeailComponent implements OnInit {
   showDrivers = false;
-  constructor() { }
+  id: any = '';
+  constructor(private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.route.paramMap
+      .subscribe((data: any) => {
+        this.id = data.params ? data.params.userId : '';
+      });
   }
 
 }

@@ -1,0 +1,160 @@
+<div class="container-fluid p-0">
+    <div class="header">
+        <input type="text" placeholder="search Driver">
+        <button class="search"> Search</button>
+        <button mat-button class="filter">
+            <mat-icon>dns
+            </mat-icon>
+            Apply Filter
+        </button>
+        <button mat-button class="add" [routerLink]="'/layout/users/detail'">
+            <mat-icon>add</mat-icon>
+            Add Driver
+        </button>
+    </div>
+    <div class="list  container-fluid">
+        <div class="row head">
+            <div class="col-2 ">Driver ID</div>
+            <div class="col-2 ">Name</div>
+            <div class="col-2 ">Mobile</div>
+            <div class="col-2 "> DOJ</div>
+            <div class="col-1 ">RCount</div>
+            <div class="col-1 ">CCount</div>
+            <div class="col-2  align-center">Action</div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-2 m-auto ">
+                Akishay
+            </div>
+            <div class="col-2 m-auto "> 876543211</div>
+            <div class="col-2 m-auto "> 01-02-2019</div>
+            <div class="col-1 m-auto ">24</div>
+            <div class="col-1 m-auto ">2</div>
+            <div class="col-2 m-auto  align-center">
+                <button class="delete" mat-button>Delete</button>
+                <button class="block" mat-button>Block</button>
+            </div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-2 m-auto">Malixon</div>
+            <div class="col-2 m-auto"> 998877839</div>
+            <div class="col-2 m-auto"> 22-02-2019</div>
+            <div class="col-1 m-auto">16</div>
+            <div class="col-1 m-auto">2</div>
+            <div class="col-2 m-auto align-center ">
+                <button class="delete" mat-button>Delete</button>
+                <button class="block" mat-button>Block</button>
+            </div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-2 m-auto ">
+                Akishay
+            </div>
+            <div class="col-2 m-auto "> 876543211</div>
+            <div class="col-2 m-auto "> 01-02-2019</div>
+            <div class="col-1 m-auto ">24</div>
+            <div class="col-1 m-auto ">2</div>
+            <div class="col-2 m-auto  align-center">
+                <button class="delete" mat-button>Delete</button>
+                <button class="block" mat-button>Block</button>
+            </div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-2 m-auto">Malixon</div>
+            <div class="col-2 m-auto"> 998877839</div>
+            <div class="col-2 m-auto"> 22-02-2019</div>
+            <div class="col-1 m-auto">16</div>
+            <div class="col-1 m-auto">2</div>
+            <div class="col-2 m-auto align-center ">
+                <button class="delete" mat-button>Delete</button>
+                <button class="block" mat-button>Block</button>
+            </div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-2 m-auto ">
+                Akishay
+            </div>
+            <div class="col-2 m-auto "> 876543211</div>
+            <div class="col-2 m-auto "> 01-02-2019</div>
+            <div class="col-1 m-auto ">24</div>
+            <div class="col-1 m-auto ">2</div>
+            <div class="col-2 m-auto  align-center">
+                <button class="delete" mat-button>Delete</button>
+                <button class="block" mat-button>Block</button>
+            </div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-2 m-auto">Malixon</div>
+            <div class="col-2 m-auto"> 998877839</div>
+            <div class="col-2 m-auto"> 22-02-2019</div>
+            <div class="col-1 m-auto">16</div>
+            <div class="col-1 m-auto">2</div>
+            <div class="col-2 m-auto align-center ">
+                <button class="delete" mat-button>Delete</button>
+                <button class="block" mat-button>Block</button>
+            </div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-2 m-auto ">
+                Akishay
+            </div>
+            <div class="col-2 m-auto "> 876543211</div>
+            <div class="col-2 m-auto "> 01-02-2019</div>
+            <div class="col-1 m-auto ">24</div>
+            <div class="col-1 m-auto ">2</div>
+            <div class="col-2 m-auto  align-center">
+                <button class="delete" mat-button>Delete</button>
+                <button class="block" mat-button>Block</button>
+            </div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-2 m-auto">Malixon</div>
+            <div class="col-2 m-auto"> 998877839</div>
+            <div class="col-2 m-auto"> 22-02-2019</div>
+            <div class="col-1 m-auto">16</div>
+            <div class="col-1 m-auto">2</div>
+            <div class="col-2 m-auto align-center ">
+                <button class="delete" mat-button>Delete</button>
+                <button class="block" mat-button>Block</button>
+            </div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-2 m-auto ">
+                Akishay
+            </div>
+            <div class="col-2 m-auto "> 876543211</div>
+            <div class="col-2 m-auto "> 01-02-2019</div>
+            <div class="col-1 m-auto ">24</div>
+            <div class="col-1 m-auto ">2</div>
+            <div class="col-2 m-auto  align-center">
+                <button class="delete" mat-button>Delete</button>
+                <button class="block" mat-button>Block</button>
+            </div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-2 m-auto">Malixon</div>
+            <div class="col-2 m-auto"> 998877839</div>
+            <div class="col-2 m-auto"> 22-02-2019</div>
+            <div class="col-1 m-auto">16</div>
+            <div class="col-1 m-auto">2</div>
+            <div class="col-2 m-auto align-center ">
+                <button class="delete" mat-button>Delete</button>
+                <button class="block" mat-button>Block</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+</div>

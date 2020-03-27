@@ -6,14 +6,15 @@ import { UserDeailComponent } from './components/user-deail/user-deail.component
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from 'src/app/shared/modules/material.module';
 import { UserHistoryComponent } from './components/user-deail/user-history/user-history.component';
-import {UserSearchDriverComponent} from './components/user-deail/user-search-driver/user-search-driver.component'
+import { UserSearchDriverComponent } from './components/user-deail/user-search-driver/user-search-driver.component'
 
 const routes: Routes = [
   {
     path: '', component: UsersComponent, children: [
       { path: '', redirectTo: 'list', pathMatch: 'full' },
       { path: 'list', component: UserListComponent },
-      { path: 'detail', component: UserDeailComponent }
+      { path: 'detail', component: UserDeailComponent },
+      { path: 'detail/:userId', component: UserDeailComponent },
     ]
   }
 ]

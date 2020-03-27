@@ -14,7 +14,8 @@
   .b-b {
     border-bottom: 1px solid #eee;
     padding: 10px;
-    &:hover{
+
+    &:hover {
       background: #ccc;
       cursor: pointer;
     }
@@ -73,8 +74,10 @@
     color: #fff;
   }
 }
-.filter{
+
+.filter {
   padding: 5px;
+
   input {
     padding: 5px 0 5px 3px;
     border: 1px solid #ccc;
@@ -85,4 +88,16 @@
 
     border-radius: 2px;
   }
+}
+
+.align-center {
+  text-align: center;
+}
+
+.delete {
+  color: red;
+}
+
+.block {
+  color: blue;
 }
