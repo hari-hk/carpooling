@@ -87,7 +87,7 @@
         </button>
         Tambaram to chengalpattu
       </h1>
-      <ng-container *ngIf="!showDrivers">
+      <!-- <ng-container *ngIf="!showDrivers">
         <mat-tab-group>
           <mat-tab label="Search Trip" [disabled]="!id">
             <app-assign-ride></app-assign-ride>
@@ -99,8 +99,8 @@
             <app-user-history></app-user-history>
           </mat-tab>
         </mat-tab-group>
-      </ng-container>
-      <app-user-search-driver *ngIf="showDrivers"></app-user-search-driver>
+      </ng-container> -->
+      <app-user-search-driver ></app-user-search-driver>
     </div>
   </div>
 </div>

@@ -1,0 +1,80 @@
+<h2 mat-dialog-title>Confirm Booking</h2>
+<mat-dialog-content class="set-dialog">
+    <div class="row">
+        <div class="col-12">
+            <h3>User Detail</h3>
+        </div>
+        <div class="col-3">
+            <div class="profile-pic">
+                <img src="/assets/images/profile-image.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-4">
+            <p>Name <span>:</span> </p>
+            <p>Contact No<span>:</span></p>
+        </div>
+        <div class="col-5 detail">
+            <p>Mukesh Vithuvan</p>
+            <p>9987372773</p>
+        </div>
+    </div>
+    <div class="row inter-col">
+        <div class="col-6">
+            <p class="source">
+                <mat-icon>location_on</mat-icon> Thambaram, Chennai, India
+            </p>
+        </div>
+        <div class="col-6">
+            <p class="destination">
+                <mat-icon>location_on</mat-icon> Guindy, Chennai, India
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3>Driver Detail</h3>
+        </div>
+        <div class="col-3">
+            <div class="profile-pic">
+                <img src="/assets/images/profile-image.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-4">
+            <p>Name <span>:</span> </p>
+            <p>Reg No<span>:</span></p>
+            <p>Vehicle No<span>:</span></p>
+        </div>
+        <div class="col-5 detail">
+            <p>Ananda Syanan</p>
+            <p>9987372773</p>
+            <p>TN 75 L6111</p>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-3">
+            <div class="profile-pic">
+                <h3> <span>₹</span> 300
+                </h3>
+            </div>
+        </div>
+        <div class="col-4">
+            <p>Total KMs <span>:</span> </p>
+            <p>ETD<span>:</span></p>
+            <p>Trip Date<span>:</span></p>
+            <p>Trip Time<span>:</span></p>
+        </div>
+        <div class="col-5 detail">
+            <p>300</p>
+            <p>2 hours</p>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <p>TN 75 L6111</p>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true">Confirm</button>
+</mat-dialog-actions>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { CommonPopUpComponent } from 'src/app/shared/component/common-popup/common-popup.component';
+import { ConfirmBookingComponent } from '../confirm-booking/confirm-booking.component';
 
 @Component({
     selector: 'app-user-search-driver',
@@ -12,9 +13,8 @@ export class UserSearchDriverComponent implements OnInit {
     constructor(public dialog: MatDialog) { }
 
     ngOnInit() { }
-    openDialog(): void {
-        const dialogRef = this.dialog.open(CommonPopUpComponent, {
-            width: '250px',
+    bookCab(): void {
+        const dialogRef = this.dialog.open(ConfirmBookingComponent, {
             data: { message: 'successfully created ride' }
         });
 

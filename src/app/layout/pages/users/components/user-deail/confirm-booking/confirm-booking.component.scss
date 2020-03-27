@@ -1,0 +1,78 @@
+.set-dialog {
+  width: 600px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  margin: 10px 0 16px 10px;
+  font-weight: 500;
+  color: #6b6363;
+}
+
+.source {
+  text-align: center;
+
+  mat-icon {
+    color: green;
+    vertical-align: middle;
+  }
+}
+
+.destination {
+  text-align: center;
+
+  mat-icon {
+    color: red;
+    vertical-align: middle;
+  }
+}
+
+.detail {
+  p {
+    color: black;
+  }
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  h3 {
+    color: blue;
+    font-size: 20px;
+
+    span {
+      font-size: 15px;
+
+    }
+  }
+}
+
+p {
+  vertical-align: middle;
+  color: #4c4b4b;
+  font-size: 12px;
+  margin: 5px 0;
+
+  span {
+    float: right;
+    font-weight: 500;
+  }
+}
+
+.inter-col {
+  margin-top: 10px;
+}

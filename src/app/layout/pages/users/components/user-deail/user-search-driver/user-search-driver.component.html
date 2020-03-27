@@ -1,124 +1,93 @@
-<div>
+<div class="container-fluid">
     <mat-card>
-        <div class="tot">
-            <div class="profile-pic">
-                <img src="/assets/images/profile-image.jpg" alt="">
+        <div class="row">
+            <div class="col-3">
+                <div class="profile-pic">
+                    <img src="/assets/images/profile-image.jpg" alt="">
+                </div>
             </div>
-            <div class="detail">
-                <p>Name: <span> Shon Thomas</span></p>
-                <p>Reg no: <span> 9987372773</span></p>
+            <div class="col-4">
+                <p>Name <span>:</span> </p>
+                <p>Reg No<span>:</span></p>
+                <p>Vehicle No<span>:</span></p>
             </div>
-        </div>
-        <p>Vehicle: <span> TN 75 L6111</span></p>
-        <p>Seat/Type: <span>5 sitters / AC</span></p>
-
-        <p class="availabity">
-            <span> 0.2km away</span>
-            <span> Rating 4/5</span></p>
-
-        <div class="book-term">
-            <p class="rate">
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star_outline
-                </mat-icon>
-            </p>
-            <button mat-button (click)="openDialog()">Book now</button>
+            <div class="col-5 detail">
+                <p>Ananda Sayanan</p>
+                <p>9987372773</p>
+                <p>TN 75 L6111</p>
+            </div>
+            <div class="col-4">
+                <p class="rate">
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star_outline
+                    </mat-icon>
+                </p>
+            </div>
+            <div class="col-4">
+                <p class="review">20 + reviews</p>
+            </div>
+            <div class="col-4">
+                <p class="total-ride">Total ride 40</p>
+            </div>
+            <div class="col-4">
+                <h1 class="price">
+                    <span>₹</span> 300
+                </h1>
+            </div>
+            <div class="col-4">
+                <button color="primary" (click)="bookCab('now')" mat-button>Book now</button>
+            </div>
+            <div class="col-4">
+                <button color="primary" (click)="bookCab('later')"  mat-button>Book Later</button>
+            </div>
         </div>
     </mat-card>
-</div>
-<div>
     <mat-card>
-        <div class="tot">
-            <div class="profile-pic">
-                <img src="/assets/images/profile-image.jpg" alt="">
+        <div class="row">
+            <div class="col-3">
+                <div class="profile-pic">
+                    <img src="/assets/images/profile-image.jpg" alt="">
+                </div>
             </div>
-            <div class="detail">
-                <p>Name: <span> Shon Thomas</span></p>
-                <p>Reg no: <span> 9987372773</span></p>
+            <div class="col-4">
+                <p>Name <span>:</span> </p>
+                <p>Reg No<span>:</span></p>
+                <p>Vehicle No<span>:</span></p>
             </div>
-        </div>
-        <p>Vehicle: <span> TN 75 L6111</span></p>
-        <p>Seat/Type: <span>5 sitters / AC</span></p>
-
-        <p class="availabity">
-            <span> 0.2km away</span>
-            <span> Rating 4/5</span></p>
-
-        <div class="book-term">
-            <p class="rate">
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star_outline
-                </mat-icon>
-            </p>
-            <button mat-button>Book now</button>
-        </div>
-    </mat-card>
-</div>
-<div>
-    <mat-card>
-        <div class="tot">
-            <div class="profile-pic">
-                <img src="/assets/images/profile-image.jpg" alt="">
+            <div class="col-5 detail">
+                <p>Arun</p>
+                <p>9987372773</p>
+                <p>TN 63 MA2122</p>
             </div>
-            <div class="detail">
-                <p>Name: <span> Shon Thomas</span></p>
-                <p>Reg no: <span> 9987372773</span></p>
+            <div class="col-4">
+                <p class="rate">
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star_outline </mat-icon>
+                    <mat-icon>star_outline </mat-icon>
+                </p>
             </div>
-        </div>
-        <p>Vehicle: <span> TN 75 L6111</span></p>
-        <p>Seat/Type: <span>5 sitters / AC</span></p>
-
-        <p class="availabity">
-            <span> 0.2km away</span>
-            <span> Rating 4/5</span></p>
-
-        <div class="book-term">
-            <p class="rate">
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star_outline
-                </mat-icon>
-            </p>
-            <button mat-button>Book now</button>
-        </div>
-    </mat-card>
-</div>
-<div>
-    <mat-card>
-        <div class="tot">
-            <div class="profile-pic">
-                <img src="/assets/images/profile-image.jpg" alt="">
+            <div class="col-4">
+                <p class="review">233 + reviews</p>
             </div>
-            <div class="detail">
-                <p>Name: <span> Shon Thomas</span></p>
-                <p>Reg no: <span> 9987372773</span></p>
+            <div class="col-4">
+                <p class="total-ride">Total ride 210</p>
             </div>
-        </div>
-        <p>Vehicle: <span> TN 75 L6111</span></p>
-        <p>Seat/Type: <span>5 sitters / AC</span></p>
-
-        <p class="availabity">
-            <span> 0.2km away</span>
-            <span> Rating 4/5</span></p>
-
-        <div class="book-term">
-            <p class="rate">
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star</mat-icon>
-                <mat-icon>star_outline
-                </mat-icon>
-            </p>
-            <button mat-button>Book now</button>
+            <div class="col-4">
+                <h1 class="price">
+                    <span>₹</span> 366
+                </h1>
+            </div>
+            <div class="col-4">
+                <button color="primary" (click)="bookCab('now')" mat-button>Book now</button>
+            </div>
+            <div class="col-4">
+                <button color="primary" (click)="bookCab('later')"  mat-button>Book Later</button>
+            </div>
         </div>
     </mat-card>
 </div>

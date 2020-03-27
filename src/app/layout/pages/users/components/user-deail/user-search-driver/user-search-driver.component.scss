@@ -2,48 +2,56 @@ mat-card {
   border: 2px solid #eee;
   margin-bottom: 11px;
 
-  .tot {
+  .profile-pic {
     width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .profile-pic {
-      display: inline-block;
-      vertical-align: top;
-      margin-right: 10px;
-
-      img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-      }
-    }
-
-    .detail {
-      display: inline-block;
-      width: calc(100% - 62px);
-      vertical-align: middle;
-      color: #7d7676;
-
-      span {
-        float: right;
-        font-weight: 500;
-        color: #000;
-      }
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
     }
   }
 
   .rate {
     color: #ffb407;
+    text-align: left;
+  }
+
+  .review {
+    color: blue;
+    cursor: pointer;
     text-align: center;
+    margin-top: 10px;
+  }
+
+  .detail {
+    p {
+      color: black;
+    }
+  }
+
+  .total-ride {
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  .review:hover {
+    text-decoration: underline;
   }
 
   p {
     vertical-align: middle;
     color: #7d7676;
+    font-size: 12px;
+    margin: 5px 0;
 
     span {
       float: right;
       font-weight: 500;
-      color: #000;
     }
   }
 
@@ -51,23 +59,13 @@ mat-card {
     vertical-align: middle;
   }
 
-  .availabity {
-    display: flex;
-    justify-content: space-between;
-
-    span {}
+  .price {
+    margin: auto;
+    color: gray;
+    font-size: 24px;
+    margin-top: 2px;
+    span{
+      color: gray;
+    }
   }
-
-
-}
-
-button {
-  background: blue;
-  color: #fff;
-}
-
-.book-term {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
