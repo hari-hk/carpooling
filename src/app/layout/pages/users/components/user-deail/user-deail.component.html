@@ -21,14 +21,6 @@
           </div>
           <div class="col-6"><label for="mobileNumber">Mobile Number</label>
             <input type="tel" id="mobileNumber" name="mobileNumber"></div>
-          <div class="col-6">
-            <label for="source">Source</label>
-            <input type="text" id="source" name="source">
-          </div>
-          <div class="col-6">
-            <label for="destination">Destination</label>
-            <input type="text" id="destination" name="destination">
-          </div>
           <div class="col-6"> <label for="email">Email ID</label>
             <input type="email" id="email" name="email"></div>
           <div class="col-6">
@@ -89,21 +81,26 @@
 
     </div>
     <div class="col-5 non-forms cols">
-      <ng-container *ngIf="id; else newUser">
-        <h1 *ngIf="!showDrivers">Ride History
-        </h1>
-        <h1 *ngIf="showDrivers">
-          <button mat-icon-button (click)="showDrivers=false">
-            <mat-icon>keyboard_backspace</mat-icon>
-          </button>
-          Available Drivers
-        </h1>
-        <app-user-history *ngIf="!showDrivers"></app-user-history>
-        <app-user-search-driver *ngIf="showDrivers"></app-user-search-driver>
+      <h1 *ngIf="showDrivers">
+        <button mat-icon-button (click)="showDrivers=false">
+          <mat-icon>keyboard_backspace</mat-icon>
+        </button>
+        Tambaram to chengalpattu
+      </h1>
+      <ng-container *ngIf="!showDrivers">
+        <mat-tab-group>
+          <mat-tab label="Search Trip" [disabled]="!id">
+            <app-assign-ride></app-assign-ride>
+          </mat-tab>
+          <mat-tab label="Upcomming Trip" [disabled]="!id">
+            <app-user-upcomming></app-user-upcomming>
+          </mat-tab>
+          <mat-tab label="Past Trip" [disabled]="!id">
+            <app-user-history></app-user-history>
+          </mat-tab>
+        </mat-tab-group>
       </ng-container>
-      <ng-template #newUser>
-        <h1 class="user-message"> Create New User</h1>
-      </ng-template>
+      <app-user-search-driver *ngIf="showDrivers"></app-user-search-driver>
     </div>
   </div>
 </div>

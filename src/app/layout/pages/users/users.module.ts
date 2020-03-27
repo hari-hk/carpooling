@@ -6,7 +6,9 @@ import { UserDeailComponent } from './components/user-deail/user-deail.component
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from 'src/app/shared/modules/material.module';
 import { UserHistoryComponent } from './components/user-deail/user-history/user-history.component';
+import { UserUpcommingComponent } from './components/user-deail/user-upcomming/user-upcomming.component';
 import { UserSearchDriverComponent } from './components/user-deail/user-search-driver/user-search-driver.component'
+import { AssignRideComponent } from './components/user-deail/assign-ride/assign-ride.component';
 
 const routes: Routes = [
   {
@@ -19,8 +21,12 @@ const routes: Routes = [
   }
 ]
 @NgModule({
-  declarations: [UsersComponent, UserListComponent, UserDeailComponent,
+  declarations: [UsersComponent,
+    UserListComponent,
+    UserDeailComponent,
+    AssignRideComponent,
     UserHistoryComponent,
+    UserUpcommingComponent,
     UserSearchDriverComponent],
   imports: [
     CommonModule,
