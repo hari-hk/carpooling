@@ -12,8 +12,8 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: './pages/dashboard/dashboard.module#DashboardModule' },
       { path: 'drivers', loadChildren: './pages/drivers/drivers.module#DriversModule' },
-      { path: 'users', loadChildren: './pages/users/users.module#UsersModule' }
-
+      { path: 'users', loadChildren: './pages/users/users.module#UsersModule' },
+      { path: 'owners', loadChildren: './pages/owners/owners.module#OwnersModule' }
     ]
   }
 ]

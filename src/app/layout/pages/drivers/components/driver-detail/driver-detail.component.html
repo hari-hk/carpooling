@@ -1,0 +1,86 @@
+<div class="container-fluid">
+    <h1>Add New Driver</h1>
+    <div class="row">
+        <div class="col-3">
+            <!-- to add profile image -->
+        </div>
+        <div class="col-3">
+            <label for="fName">First Name</label>
+            <input type="text" id="fName" name="fName">
+        </div>
+        <div class="col-3">
+            <label for="lName">Last Name</label>
+            <input type="text" id="lName" name="lName">
+        </div>
+        <div class="col-3">
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="col-3">
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option disabled>-</option>
+                <option value="men">Men</option>
+                <option value="saab">Women</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="col-3">
+            <label for="dob">Date of Birth</label>
+            <input matInput id="dob" (focus)="picker.open()" [matDatepicker]=" picker" placeholder="Choose a date">
+            <mat-datepicker #picker></mat-datepicker>
+        </div>
+        <div class="col-3">
+            <label for="address">Address</label>
+            <textarea id="address"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <!-- <div class="col-3">
+            <label for="address2">Address (Permenant)</label>
+            <textarea id="address2"></textarea>
+        </div> -->
+        <div class="col-3">
+            <label for="city">City</label>
+            <select id="city">
+                <option disabled>-</option>
+                <option value="chennai">Chennai</option>
+                <option value="sdas">Kanchepuram</option>
+                <option value="marthandam">Marthandam</option>
+            </select>
+        </div>
+        <div class="col-3">
+            <label for="state">State</label>
+            <select id="state">
+                <option disabled>-</option>
+                <option value="tn">Tamilnadu</option>
+                <option value="kl">Kerala</option>
+                <option value="un">Maharastra</option>
+            </select>
+        </div>
+        <div class="col-3">
+            <label for="district">District</label>
+            <select id="district">
+                <option disabled>-</option>
+                <option value="tn">Tamilnadu</option>
+                <option value="kl">Kerala</option>
+                <option value="un">Maharastra</option>
+            </select>
+        </div>
+        <div class="col-3">
+            <label for="pincode">Pincode</label>
+            <input type="number" name="pincode" id="pincode">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 t-a-c">
+            <button class="submit" mat-button>Submit</button>
+        </div>
+    </div>
+</div>

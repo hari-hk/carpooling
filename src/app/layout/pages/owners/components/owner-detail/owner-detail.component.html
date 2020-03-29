@@ -1,19 +1,16 @@
 <div class="container-fluid warpper">
-  <div class="row custom-row">
-    <div class="col-7 cols b-style">
-      <h1 *ngIf="!id">Create User</h1>
-      <div *ngIf="id" class="ride-details">
-        <p><span>133</span> Total Ride</p>
-        <p class="can"><span>10</span> Cancelled Ride</p>
-      </div>
+  <div class="row">
+    <div class="col-6 cols b-style">
+      <h1>Create Owner</h1>
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-4">
             <img class="profile-pic" src="/assets/images/profile-image.jpg" alt="">
             <button mat-button color="primary">Upload</button>
           </div>
-          <div class="col-6">
-            <button mat-button (click)="showDrivers=true" class="search-ride" color="primary">Search Ride</button>
+          <div class="col-8">
+            <button mat-button class="search-ride" [disabled]="!id" (click)="addVehicle()" color="primary">Add
+              Driver</button>
           </div>
           <div class="col-6">
             <label for="uName">User Name</label>
@@ -72,35 +69,26 @@
             <input type="number" name="pincode" id="pincode">
           </div>
         </div>
+        <div class="row mt-20">
+          <div class="col-5">
+            <p>File name 0001</p>
+          </div>
+          <div class="col-3"> <button class="m-auto" type="file" mat-button>Upload Documents</button>
+          </div>
+
+        </div>
         <div class="row footer-data">
           <button *ngIf="id" class="delete" mat-button>Delete</button>
           <button class="submit" mat-button>{{id?'Update':'Create'}}</button>
           <button *ngIf="id" class="block" mat-button>Block</button>
         </div>
       </div>
-
     </div>
-    <div class="col-5 non-forms cols">
-      <h1 *ngIf="showDrivers">
-        <button mat-icon-button (click)="showDrivers=false">
-          <mat-icon>keyboard_backspace</mat-icon>
-        </button>
-        Tambaram to chengalpattu
-      </h1>
-      <ng-container *ngIf="!showDrivers">
-        <mat-tab-group>
-          <mat-tab label="Search Trip" [disabled]="!id">
-            <app-assign-ride></app-assign-ride>
-          </mat-tab>
-          <mat-tab label="Upcomming Trip" [disabled]="!id">
-            <app-user-upcomming></app-user-upcomming>
-          </mat-tab>
-          <mat-tab label="Past Trip" [disabled]="!id">
-            <app-user-history></app-user-history>
-          </mat-tab>
-        </mat-tab-group>
-      </ng-container>
-      <app-user-search-driver *ngIf="showDrivers"></app-user-search-driver>
+    <div class="col-6">
+      <app-vehicle-list *ngIf="id"></app-vehicle-list>
+      <div class="greet" *ngIf="!id">
+        You can add terms and conditions here or any greetings here
+      </div>
     </div>
   </div>
 </div>
