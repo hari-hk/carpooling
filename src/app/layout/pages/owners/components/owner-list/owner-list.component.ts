@@ -13,7 +13,7 @@ export class OwnerListComponent implements OnInit {
   ngOnInit() {
   }
   openDetail() {
-    // this.router.navigate(['/layout/users/detail/21'])
+    this.router.navigate(['/layout/owners/details/99'])
   }
 
 }

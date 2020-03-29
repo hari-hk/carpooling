@@ -22,7 +22,7 @@ export class OwnerDetailComponent implements OnInit {
 
   addVehicle(): void {
     const dialogRef = this.dialog.open(VehicleDetailComponent, {
-      width: '450px'
+      width: '550px'
     });
 
     dialogRef.afterClosed().subscribe(result => {

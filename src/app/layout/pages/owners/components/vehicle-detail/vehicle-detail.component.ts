@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AddRideComponent } from '../../../add-ride/add-ride.component';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-vehicle-detail',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehicleDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<AddRideComponent>) { }
 
   ngOnInit() {
   }
+  onNoClick(): void {
+    this.dialogRef.close();
 
+  }
 }

@@ -1,0 +1,68 @@
+<h1>Create Vehicle</h1>
+<div mat-dialog-content>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <img class="profile-pic" src="/assets/images/profile-image.jpg" alt="">
+        <button mat-button color="primary">Upload</button>
+      </div>
+      <div class="col-6">
+        <!-- <label for="uName">User Name</label>
+        <input type="text" id="uName" name="userName"> -->
+      </div>
+      <div class="col-6">
+        <label for="vType">Vehicle Type</label>
+        <select id="vType">
+          <option disabled>-</option>
+          <option value="prime">Prime</option>
+          <option value="lux">Lux</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <label for="Brand">Brand</label>
+        <select id="Brand">
+          <option disabled>-</option>
+          <option value="BMW">BMW</option>
+          <option value="AUDi">AUDi</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <label for="reg">Register Number</label>
+        <input type="text" id="reg">
+      </div>
+      <div class="col-6">
+        <label for="fc">Fitness Certificate</label>
+        <input matInput id="fc" (focus)="fcPiker.open()" [matDatepicker]="fcPiker" placeholder="Choose a date">
+        <mat-datepicker #fcPiker></mat-datepicker>
+      </div>
+      <div class="col-6">
+        <label for="incurance">Insurance Date</label>
+        <input matInput id="incurance" (focus)="insurancePiker.open()" [matDatepicker]="insurancePiker" placeholder="Choose a date">
+        <mat-datepicker #insurancePiker></mat-datepicker>
+      </div>
+      <div class="col-6">
+        <label for="permit">Permit</label>
+        <input matInput id="permit" (focus)="permitPiker.open()" [matDatepicker]="permitPiker" placeholder="Choose a date">
+        <mat-datepicker #permitPiker></mat-datepicker>
+      </div>
+      <div class="col-6">
+        <label for="pc">Pollution Certificate</label>
+        <input matInput id="pc" (focus)="pcPiker.open()" [matDatepicker]="pcPiker" placeholder="Choose a date">
+        <mat-datepicker #pcPiker></mat-datepicker>
+      </div>
+      <div class="col-6">
+        <label for="driver">Driver</label>
+        <select id="driver">
+          <option disabled>-</option>
+          <option value="BMW">Hari hara Kumar</option>
+          <option value="AUDi">Sukumaran</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 align-center">
+        <button mat-button class="submit" primary="true">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
