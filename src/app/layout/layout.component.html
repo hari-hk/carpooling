@@ -1,12 +1,18 @@
-<div class="layout-container">
+<!-- <div class="layout-container">
   <app-header></app-header>
   <div class="app-body">
-    <!-- <div class="body-menu">
-      <app-menu></app-menu>
-    </div>
-    <div class="body-container">
-
-    </div> -->
     <router-outlet></router-outlet>
   </div>
-</div>
+</div> -->
+
+<mat-drawer-container class="layout-container" [hasBackdrop]="true">
+  <mat-drawer #drawer position="end" [mode]="over">
+    <app-menu (toggleNotificationMenu)="drawer.toggle()"></app-menu>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleNotificationMenu)="drawer.toggle()"></app-header>
+    <div class="app-body">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

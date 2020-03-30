@@ -1,31 +1,51 @@
 <div class="container-fluid">
-<div class="cell">
-    <label for="source">Source</label>
-    <input type="text" id="source" name="source">
-</div>
-<div class="cell">
-    <label for="destination">Destination</label>
-    <input type="text" id="destination" name="destination">
-</div>
-<div class="row">
-    <div class="col-6">
-        <label for="type">Vehicle Type</label>
-        <select id="type">
-            <option disabled>-</option>
-            <option value="Lux">Lux</option>
-            <option value="Mini">Mini</option>
-            <option value="Prime">Prime</option>
-            <option value="SUV">SUV</option>
-        </select>
+    <div class="cell">
+        <label for="source">Source</label>
+        <input type="text" id="source" name="source">
     </div>
-    <div class="col-6">
-        <label for="type">Vehicle Mode</label>
-        <select id="type">
-            <option disabled>-</option>
-            <option value="AC">AC</option>
-            <option value="N-AC">N-AC</option>
-        </select>
+    <div class="cell">
+        <label for="destination">Destination</label>
+        <input type="text" id="destination" name="destination">
     </div>
-</div>
-<button mat-button>Search</button>
+    <div class="row">
+        <div class="col-6">
+            <label for="type">Vehicle Type</label>
+            <select id="type">
+                <option disabled>-</option>
+                <option value="Lux">Lux</option>
+                <option value="Mini">Mini</option>
+                <option value="Prime">Prime</option>
+                <option value="SUV">SUV</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <label for="type">Vehicle Mode</label>
+            <select id="type">
+                <option disabled>-</option>
+                <option value="AC">AC</option>
+                <option value="N-AC">N-AC</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <label for="btype">Booking Type</label>
+            <select id="btype" [(ngModel)]="bookingType">
+                <option disabled>-</option>
+                <option value="now">Book Now</option>
+                <option value="Later">Book Later</option>
+            </select>
+        </div>
+    </div>
+    <div class="row" *ngIf="bookingType==='Later'">
+        <div class="col-6">
+            <label for="date">Book on</label>
+            <input matInput (focus)="picker.open()" [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker #picker></mat-datepicker>
+        </div>
+        <div class="col-6">
+            <label for="time">Book Time</label>
+            <input matInput (focus)="date.open()" [matDatepicker]="date" placeholder="Choose a date">
+            <mat-datepicker #date></mat-datepicker>
+        </div>
+    </div>
+    <button mat-button>{{bookingType==='Later'?'Book':'Search Vehicle'}}</button>
 </div>

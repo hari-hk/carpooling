@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AssignRideComponent implements OnInit {
+    bookingType = '';
     constructor() { }
 
     ngOnInit() { }

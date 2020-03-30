@@ -9,6 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 export class UserDeailComponent implements OnInit {
   showDrivers = false;
   id: any = '';
+  selected = 0;
+
+
   constructor(private route: ActivatedRoute
   ) { }
 
@@ -17,6 +20,16 @@ export class UserDeailComponent implements OnInit {
       .subscribe((data: any) => {
         this.id = data.params ? data.params.userId : '';
       });
+    this.route.queryParams.subscribe((el: any) => {
+      if (el.page === 'upcomming') {
+        this.selected = 1;
+      }
+    })
+
+  }
+
+  changeSelected(event) {
+    this.selected = event;
   }
 
 }

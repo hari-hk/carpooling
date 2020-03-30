@@ -21,6 +21,7 @@ import {
     MatTabsModule,
     MatTooltipModule,
     MatTreeModule,
+    MatSidenavModule,
 } from '@angular/material';
 
 import { A11yModule } from '@angular/cdk/a11y';
@@ -78,7 +79,8 @@ import { MatMenuModule } from '@angular/material/menu';
         MatTreeModule,
         MatProgressBarModule,
         MatPaginatorModule,
-        MatMenuModule
+        MatMenuModule,
+        MatSidenavModule
     ]
 })
 export class MaterialModule { }

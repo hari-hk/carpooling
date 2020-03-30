@@ -88,7 +88,8 @@
         Tambaram to chengalpattu
       </h1>
       <ng-container *ngIf="!showDrivers">
-        <mat-tab-group>
+        <mat-tab-group  [selectedIndex]="selected"
+        (selectedIndexChange)="changeSelected($event)">
           <mat-tab label="Search Trip" [disabled]="!id">
             <app-assign-ride></app-assign-ride>
           </mat-tab>

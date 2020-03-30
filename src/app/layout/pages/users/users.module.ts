@@ -10,6 +10,7 @@ import { UserUpcommingComponent } from './components/user-deail/user-upcomming/u
 import { UserSearchDriverComponent } from './components/user-deail/user-search-driver/user-search-driver.component'
 import { AssignRideComponent } from './components/user-deail/assign-ride/assign-ride.component';
 import { ConfirmBookingComponent } from './components/user-deail/confirm-booking/confirm-booking.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -33,7 +34,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   entryComponents: [ConfirmBookingComponent]
 })
