@@ -13,7 +13,7 @@ export class AddRideComponent implements OnInit {
 
   ngOnInit() {
   }
-  onNoClick(): void {
-    this.dialogRef.close();
+  onNoClick(data?: string): void {
+    this.dialogRef.close(data);
   }
 }

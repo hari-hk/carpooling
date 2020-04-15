@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from 'src/app/shared/modules/material.module';
-// import { ChartsModule } from 'ng2-charts';
+import { ChartsModule } from 'ng2-charts';
 import { AddRideComponent } from '../add-ride/add-ride.component';
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     MaterialModule,
-    // ChartsModule,
+    ChartsModule,
     RouterModule.forChild(routes)
   ],
   entryComponents: [AddRideComponent]

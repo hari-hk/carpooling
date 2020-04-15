@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MaterialModule } from '../shared/modules/material.module';
+import { AvailabilityComponent } from './pages/avalibility/avalibility.component';
 
 const routes: Routes = [
   {
@@ -13,13 +14,14 @@ const routes: Routes = [
       { path: 'dashboard', loadChildren: './pages/dashboard/dashboard.module#DashboardModule' },
       { path: 'drivers', loadChildren: './pages/drivers/drivers.module#DriversModule' },
       { path: 'users', loadChildren: './pages/users/users.module#UsersModule' },
-      { path: 'owners', loadChildren: './pages/owners/owners.module#OwnersModule' }
+      { path: 'owners', loadChildren: './pages/owners/owners.module#OwnersModule' },
+      { path: 'availability', component: AvailabilityComponent }
     ]
   }
 ]
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, MenuComponent],
+  declarations: [LayoutComponent, HeaderComponent, MenuComponent, AvailabilityComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

@@ -1,6 +1,8 @@
 h1 {
   font-size: 16px;
   text-align: center;
+  font-weight: 500;
+  color: #565656;
 }
 
 input {
@@ -13,8 +15,12 @@ input {
     border: 1px solid #ccc;
   }
 }
-
-button {
-  width: 100%;
-  background: #ccc;
+.actions{
+  float: right;
+  .confirm {
+    color: #ffffff;
+    background: #4156b5;
+    margin: 12px 0;
+  }
 }
+

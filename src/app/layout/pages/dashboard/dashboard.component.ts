@@ -2,24 +2,31 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { AddRideComponent } from '../add-ride/add-ride.component';
 import { Router } from '@angular/router';
-
+import { ChartDataSets, ChartOptions } from 'chart.js';
+import { Color, Label } from 'ng2-charts';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  chartOptions = {
-    responsive: true
-  };
-
-  chartData = [
-    { data: [330, 600, 260, 700], label: 'Rides' },
-    { data: [120, 455, 100, 340], label: 'Outstation' },
-    { data: [45, 67, 800, 500], label: 'Cancellations' }
+  public lineChartData: ChartDataSets[] = [
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'users' },
+    { data: [44, 55, 20, 22, 56, 90, 40], label: 'Rides' }
   ];
-
-  chartLabels = ['January', 'February', 'Mars', 'April'];
+  public lineChartLabels: Label[] = ['2018', '2019', '2020'];
+  public lineChartOptions = {
+    responsive: true,
+  };
+  public lineChartColors: Color[] = [
+    {
+      borderColor: 'black',
+      backgroundColor: 'rgba(255,0,0,0.3)',
+    },
+  ];
+  public lineChartLegend = true;
+  public lineChartType = 'line';
+  public lineChartPlugins = [];
 
   constructor(public dialog: MatDialog,
     public router: Router) { }
@@ -37,7 +44,12 @@ export class DashboardComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed', result);
-      this.router.navigate(['./layout/users/detail/12']);
+      if (result === 'search') {
+        this.router.navigate(['./layout/users/detail/12']);
+      }
     });
+  }
+  showCars(page) {
+    this.router.navigate(['./layout/availability']);
   }
 }

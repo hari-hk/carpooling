@@ -1,12 +1,7 @@
-<!-- <h1 mat-dialog-title>Enter Mobile Number</h1>
-<div mat-dialog-content>
-  <input type="number" value="">
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Okay</button>
-</div> -->
+
 <h1>Enter Mobile Number</h1>
 <input type="text">
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Okay</button>
+<div mat-dialog-actions class="actions">
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button class="confirm" (click)="onNoClick('search')">Search</button>
 </div>
