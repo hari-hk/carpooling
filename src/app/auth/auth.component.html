@@ -1,10 +1,18 @@
 <div class="container">
-    <mat-card>
-        <!-- <p>Login</p> -->
-        <label for="email">email / usename</label>
-        <input matInput name="email" placeholder="Email / Username">
-        <label for="password"> password</label>
-        <input matInput placeholder="password" name="password">
-        <button mat-button color="primary" [routerLink]="['/layout']" routerLinkActive="router-link-active" >Login</button>
-    </mat-card>
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <mat-card>
+            <p class="title">Sign in to Carpooling</p>
+            <label for="email">Email / username</label>
+            <input formControlName="email" matInput name="email" placeholder="Email / Username">
+            <p class="error m-t-0" *ngIf="loginForm.controls.email.touched && 
+            loginForm.controls.email.invalid">Please Enter valid Email</p>
+            <label for="password">Password</label>
+            <input matInput formControlName="password" type="password" placeholder="password" name="password">
+            <p class="error  m-t-0" *ngIf="loginForm.controls.password.touched && 
+            loginForm.controls.password.invalid">Please Enter Password</p>
+            <p class="error">{{errorMessage}}</p>
+            <button mat-button type="submit" color="primary">Login</button>
+        </mat-card>
+    </form>
+
 </div>

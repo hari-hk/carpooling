@@ -10,8 +10,9 @@
   </div>
   <div class="right-item">
     <button (click)="openNotification()" mat-button> Notification (5)</button>
-    <img src="/assets/images/profile-image.jpg" alt="">
-    <p>Peter John</p>
-    <button mat-button>Logout</button>
+    <div style="display: inline-block;" (click)="gotoProfile()"> <img src="/assets/images/profile-image.jpg" alt="">
+      <p>Peter John</p>
+    </div>
+    <button routerLink="/auth" mat-button>Logout</button>
   </div>
 </div>
