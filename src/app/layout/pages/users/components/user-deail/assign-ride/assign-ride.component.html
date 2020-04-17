@@ -47,5 +47,5 @@
             <mat-datepicker #date></mat-datepicker>
         </div>
     </div>
-    <button mat-button>{{bookingType==='Later'?'Book':'Search Vehicle'}}</button>
+    <button (click)="searchVehicle()" mat-button>{{bookingType==='Later'?'Book':'Search Vehicle'}}</button>
 </div>

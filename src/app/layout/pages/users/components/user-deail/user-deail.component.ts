@@ -31,5 +31,8 @@ export class UserDeailComponent implements OnInit {
   changeSelected(event) {
     this.selected = event;
   }
+  searchVehicle() {
+    this.showDrivers = true;
+  }
 
 }

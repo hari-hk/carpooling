@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
     selector: 'app-assign-ride',
@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AssignRideComponent implements OnInit {
+
+    @Output() search = new EventEmitter();
     bookingType = '';
     constructor() { }
 
     ngOnInit() { }
+    searchVehicle() {
+        this.search.emit();
+    }
 }

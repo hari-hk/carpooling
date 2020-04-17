@@ -13,7 +13,7 @@
             <button mat-button color="primary">Upload</button>
           </div>
           <div class="col-6">
-            <button mat-button (click)="showDrivers=true" class="search-ride" color="primary">Search Ride</button>
+            <!-- <button mat-button (click)="" class="search-ride" color="primary">Search Ride</button> -->
           </div>
           <div class="col-6">
             <label for="uName">User Name</label>
@@ -91,7 +91,7 @@
         <mat-tab-group  [selectedIndex]="selected"
         (selectedIndexChange)="changeSelected($event)">
           <mat-tab label="Search Trip" [disabled]="!id">
-            <app-assign-ride></app-assign-ride>
+            <app-assign-ride (search)="searchVehicle()"></app-assign-ride>
           </mat-tab>
           <mat-tab label="Upcomming Trip" [disabled]="!id">
             <app-user-upcomming></app-user-upcomming>
