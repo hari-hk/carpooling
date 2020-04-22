@@ -7,6 +7,12 @@
         <label for="destination">Destination</label>
         <input type="text" id="destination" name="destination">
     </div>
+    <div class="cell">
+        <mat-radio-group class="radios">
+            <mat-radio-button checked value="1">Local</mat-radio-button>
+            <mat-radio-button value="2">OutStation</mat-radio-button>
+        </mat-radio-group>
+    </div>
     <div class="row">
         <div class="col-6">
             <label for="type">Vehicle Type</label>
@@ -24,6 +30,17 @@
                 <option disabled>-</option>
                 <option value="AC">AC</option>
                 <option value="N-AC">N-AC</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <label for="btype">Passenger Count</label>
+            <select id="btype" [(ngModel)]="passengerCount">
+                <option disabled>-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
             </select>
         </div>
         <div class="col-6">

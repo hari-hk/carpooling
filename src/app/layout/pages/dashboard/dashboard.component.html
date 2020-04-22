@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid main-board ">
   <mat-grid-list cols="4" class="counts" rowHeight="150px">
     <mat-grid-tile>
       <mat-card class="top-card card-1">
@@ -32,28 +32,136 @@
 
 
   <div class="row">
-    <div class="col-4">
-      <div style="display: block;">
-        <canvas baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels"
+    <div class="col-5">
+      <div class="charter-grp">
+        <div class="chart-header">
+          <button class="selected">Monthly</button>
+          <button>Yearly</button>
+        </div>
+        <div class="charts-group">
+          <!-- <canvas baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels"
           [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
           [plugins]="lineChartPlugins">
-        </canvas>
+        </canvas> -->
+          <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+            [title]="chartOptions.title"></apx-chart>
+
+          <h3 class="local">Total Local Ride: <span>376</span></h3>
+          <h3 class="out">Total Outstation: <span>300</span></h3>
+        </div>
       </div>
     </div>
-    <div class="col-5">
-      <button color="primary" class="find-btn" (click)="openDialog()" mat-button>
+    <div class="col-4">
+      <!-- <button class="find-btn" (click)="openDialog()" mat-button>
         <mat-icon>search</mat-icon> Search User
-      </button>
+      </button> -->
+      <div class="search">
+        <h2>Find User</h2>
+        <input placeholder="Enter Mobile number" type="text">
+        <button [routerLink]="['/layout/users/detail/12']">Search</button>
+      </div>
+      <div class="upcommings ">
+        <h1>Upcommings Ride</h1>
+        <div class="content container-fluid">
+          <div class="un-assigned">
+            <div class="row">
+              <div class="col-6">
+                <p class="source">
+                  <mat-icon>location_on</mat-icon> Thambaram, Chennai, India
+                </p>
+              </div>
+              <div class="col-6">
+                <p class="destination">
+                  <mat-icon>location_on</mat-icon> Guindy, Chennai, India
+                </p>
+              </div>
+              <div class="col-6 date">
+                <p>Scheduled On: <br>
+                  12 Jan 2020</p>
+              </div>
+              <div class="col-6 date">
+                <p>Ride Date: <br>
+                  1 May 2020 12:30pm</p>
+              </div>
+            </div>
+            <div class="">
+              <p>Driver :<button class="assign ripple">Assign Driver</button></p>
+            </div>
+          </div>
+          <div class="un-assigned">
+            <div class="row">
+              <div class="col-6">
+                <p class="source">
+                  <mat-icon>location_on</mat-icon> Thambaram, Chennai, India
+                </p>
+              </div>
+              <div class="col-6">
+                <p class="destination">
+                  <mat-icon>location_on</mat-icon> Guindy, Chennai, India
+                </p>
+              </div>
+              <div class="col-6 date">
+                <p>Scheduled On: <br>
+                  12 Jan 2020</p>
+              </div>
+              <div class="col-6 date">
+                <p>Ride Date: <br>
+                  27 May 2020 1:13pm</p>
+              </div>
+            </div>
+            <div class="">
+              <p>Driver :<button class="assign ripple">Assign Driver</button></p>
+            </div>
+          </div>
+          <div class="un-assigned">
+            <div class="row">
+              <div class="col-6">
+                <p class="source">
+                  <mat-icon>location_on</mat-icon> Thambaram, Chennai, India
+                </p>
+              </div>
+              <div class="col-6">
+                <p class="destination">
+                  <mat-icon>location_on</mat-icon> Guindy, Chennai, India
+                </p>
+              </div>
+              <div class="col-6 date">
+                <p>Scheduled On: <br>
+                  12 Jan 2020</p>
+              </div>
+              <div class="col-6 date">
+                <p>Ride Date: <br>
+                  2 July 2020 2:00pm</p>
+              </div>
+            </div>
+            <div class="">
+              <p>Driver :<button class="assign ripple">Assign Driver</button></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
     <div class="col-3 availability">
-      <mat-card class="a-card" (click)="showCars('available')">
+      <!-- <mat-card class="a-card" (click)="showCars('available')">
         <h1>Availble Cars<span>700</span></h1>
-      </mat-card>
+        <ngx-trend autoDraw="true" autoDrawDuration="3000" autoDrawEasing="ease-out" smooth="true"
+          [data]="[4,2,5,9,5,3,5,0,4,1,8,2,9,5]" [gradient]="['#2196F3']" radius="8.5" strokeWidth="2.3"
+          strokeLinecap="round">
+        </ngx-trend>
+      </mat-card> -->
       <mat-card class="a-card" (click)="showCars('onRide')">
         <h1>On-Ride Cars <span>600</span></h1>
+        <ngx-trend autoDraw="true" autoDrawDuration="3000" autoDrawEasing="ease-out" smooth="true"
+          [data]="[0,2,5,4,9,5,9,11]" [gradient]="['green']" radius="8.5" strokeWidth="2.3" strokeLinecap="round">
+        </ngx-trend>
       </mat-card>
       <mat-card class="a-card" (click)="showCars('offRide')">
-        <h1>Off-Ride Cars <span>100</span></h1>
+        <h1>Off-Ride Cars <span> 100 </span></h1>
+        <ngx-trend autoDraw="true" autoDrawDuration="3000" autoDrawEasing="ease-out" smooth="true"
+          [data]="[1,2,4,3,8,5,4,2]" [gradient]="['violet']" radius="8.5" strokeWidth="2.3" strokeLinecap="round">
+        </ngx-trend>
+
       </mat-card>
       <mat-card class="c-tarrif a-card">
         <img src="/assets/images/bank.png" alt="">

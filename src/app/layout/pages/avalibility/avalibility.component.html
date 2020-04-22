@@ -1,54 +1,60 @@
-<div class="container-fluid p-0">
-    <div class="header">
-        <p> <button mat-icon-button [routerLink]="['/layout/dashboard']" >
-                <mat-icon>keyboard_backspace</mat-icon>
-            </button> Total Cars 800</p>
-        <input type="text" placeholder="search">
-        <button class="search"> Search</button>
-        <button mat-button class="filter">
-            <mat-icon>dns
-            </mat-icon>
-            Apply Filter
-        </button>
+<div class="list container-fluid">
+    <div class="row">
+        <div class="col-3 cab-card" *ngFor="let item of availableList">
+          <div class="content ripple">
+            <div class="row">
+                <div class="col-5">
+                    <p>Vehicle ID</p>
+                </div>
+                <div class="col-7 ans">
+                    <p>#{{item.vehicleId}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <p>Driver ID</p>
+                </div>
+                <div class="col-7 ans">
+                    <p>#{{item.driverId}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <p>Status</p>
+                </div>
+                <div class="col-7 ans">
+                    <ng-container *ngIf="item.status===0; else offline">
+                        <p class="ride-on">On-ride </p>
+                    </ng-container>
+                    <ng-template #offline>
+                        <p class="ride-off">Off-ride </p>
+                    </ng-template>
+                </div>
+            </div>
+            <ng-container *ngIf="item.status===0; else showMessage">
+                <div class="row">
+                    <div class="col-5">
+                        <p>Ride ID</p>
+                    </div>
+                    <div class="col-7 ans">
+                        <p>#{{item.rideId}}</p>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #showMessage>
+                <div class="row">
+                    <div class="col-5">
+                        <p>Reason</p>
+                    </div>
+                    <div class="col-7 ans">
+                        <p>{{item.offlineReason}}</p>
+                    </div>
+                </div>
+            </ng-template>
+          </div>
+        </div>
     </div>
-    <div class="list  container-fluid">
-        <div class="row head">
-            <div class="col-2 ">Vehicle ID</div>
-            <div class="col-2 ">Vehicle Name</div>
-            <div class="col-2 ">Owner ID</div>
-            <div class="col-2 ">Total Km</div>
-            <div class="col-1 ">RCount</div>
-            <div class="col-1 ">CCount</div>
-            <div class="col-2  align-center">Status</div>
-        </div>
-        <div class="row b-b" (click)="openDetail()">
-            <div class="col-2 m-auto">#91201822</div>
-            <div class="col-2 m-auto ">
-                Maruthi Susuki
-            </div>
-            <div class="col-2 m-auto "> #76543211</div>
-            <div class="col-2 m-auto "> 20292</div>
-            <div class="col-1 m-auto ">24</div>
-            <div class="col-1 m-auto ">2</div>
-            <div class="col-2 m-auto  align-center">
-                On-ride
-            </div>
-        </div>
-        <div class="row b-b" (click)="openDetail()">
-            <div class="col-2 m-auto">#63537890</div>
-            <div class="col-2 m-auto ">
-                Tata Sumo
-            </div>
-            <div class="col-2 m-auto "> #314276393</div>
-            <div class="col-2 m-auto "> 100098</div>
-            <div class="col-1 m-auto ">542</div>
-            <div class="col-1 m-auto ">19</div>
-            <div class="col-2 m-auto  align-center">
-                off-ride
-            </div>
-        </div>
 
-    </div>
 </div>
 <div class="footer">
     <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">

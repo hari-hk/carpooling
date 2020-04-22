@@ -1,31 +1,8 @@
 .list {
-    height: calc(100vh - 167px);
+    height: calc(100vh - 108px);
     overflow-y: scroll;
     padding-bottom: 65px;
-
-    .head {
-        font-size: 14px;
-        font-weight: bold;
-        text-align: left;
-        background: #eee;
-        padding: 10px;
-    }
-
-    .b-b {
-        border-bottom: 1px solid #eee;
-        padding: 10px;
-
-        &:hover {
-            background: #ccc;
-            cursor: pointer;
-        }
-    }
-
-    .profile-pic {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-    }
+    padding-top: 10px;
 }
 
 .footer {
@@ -33,77 +10,36 @@
     bottom: 0;
     right: 0;
 }
-
-.header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 2px;
-    padding: 6px 10px;
+.cab-card {
+    .content {
+        margin: 10px 0;
+        background: #f3f3f3;
+        box-shadow: inset 3px 4px 16px -9px rgba(0, 0, 0, 0.44);
+        cursor: pointer;
+        border-radius: 6px;
+        padding: 5px;
+    }
+    // height: 200px;
     p {
-        margin: auto;
-        text-align: left;
-        font-weight: 400;
-        font-size: 20px;
-        color: blue;
+        padding: 5px;
+        color: #676464;
+        border-bottom: 1px solid #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-    input {
-        padding: 5px 0 5px 3px;
-        border: 1px solid #ccc;
-
-        &:focus {
-            border: 1px solid #ccc;
+    p:last-child {
+        border: none !important;
+    }
+    .ans {
+        p {
+            color: #000;
         }
-
-        border-radius: 2px;
-    }
-
-    button {
-        margin-right: 10px;
-        border-radius: 2px;
-    }
-
-    .search {
-        background: #fff;
-        border: 1px solid #ccc;
-        border-left: none;
-    }
-
-    .filter {
-        background: #a55f08;
-        border: 1px solid #fff;
-        color: #fff;
-    }
-
-    .add {
-        background: green;
-        border: 1px solid #fff;
-        color: #fff;
     }
 }
-
-.filter {
-    padding: 5px;
-
-    input {
-        padding: 5px 0 5px 3px;
-        border: 1px solid #ccc;
-
-        &:focus {
-            border: 1px solid #ccc;
-        }
-
-        border-radius: 2px;
-    }
+.ride-off {
+    color: red !important;
 }
-
-.align-center {
-    text-align: center;
-}
-
-.delete {
-    color: red;
-}
-
-.block {
-    color: blue;
+.ride-on {
+    color: green !important;
 }

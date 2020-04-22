@@ -5,6 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from 'src/app/shared/modules/material.module';
 import { ChartsModule } from 'ng2-charts';
 import { AddRideComponent } from '../add-ride/add-ride.component';
+import { TrendModule } from 'ngx-trend';
+import { NgApexchartsModule } from 'ng-apexcharts';
+
 
 const routes: Routes = [
   { path: '', component: DashboardComponent }]
@@ -14,6 +17,8 @@ const routes: Routes = [
     CommonModule,
     MaterialModule,
     ChartsModule,
+    TrendModule,
+    NgApexchartsModule,
     RouterModule.forChild(routes)
   ],
   entryComponents: [AddRideComponent]

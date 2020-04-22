@@ -3,7 +3,11 @@ h1 {
   margin: 8px;
   color: #3a3aa0;
 }
-
+.radios {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 13px;
+}
 input,
 select {
   width: 100%;
@@ -16,7 +20,7 @@ select {
   box-sizing: border-box;
 }
 
-select>option {
+select > option {
   padding: 5px 0;
 }
 
@@ -25,9 +29,9 @@ label {
   display: block;
   margin: 10px 0 0 0;
 }
-button{
-    width: 100%;
-    color: #fff;
-    background: green;
-    margin: 20px 0;
+button {
+  width: 100%;
+  color: #fff;
+  background: green;
+  margin: 20px 0;
 }
