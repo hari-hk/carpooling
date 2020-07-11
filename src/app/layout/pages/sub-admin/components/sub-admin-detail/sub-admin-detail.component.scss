@@ -1,0 +1,39 @@
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 6px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+label {
+  width: 100%;
+  display: block;
+  margin: 10px 0 0 0;
+}
+
+h1 {
+  color: blue;
+  margin: 15px 0;
+}
+
+.submit{
+    background: blue;
+    color: #fff;
+    margin-top: 15px;
+}
+.t-a-c{
+    text-align: center;
+}
+
+.identy-proof{
+  float: left;
+  border: solid 2px #ccc;
+  padding: 5px 9px;
+  border-radius: 5px;
+}
