@@ -17,11 +17,13 @@ const routes: Routes = [
       { path: 'sub-admin', loadChildren: './pages/sub-admin/sub-admin.module#SubAdminModule' },
       { path: 'users', loadChildren: './pages/users/users.module#UsersModule' },
       { path: 'owners', loadChildren: './pages/owners/owners.module#OwnersModule' },
+      { path: 'tariff', loadChildren: './pages/tariff/tariff.module#TariffModule' },
       { path: 'availability', component: AvailabilityComponent },
       { path: 'profile', component: ProfileComponent }
     ]
   }
 ]
+
 
 @NgModule({
   declarations: [LayoutComponent,

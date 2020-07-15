@@ -17,7 +17,23 @@
         box-shadow: inset 3px 4px 16px -9px rgba(0, 0, 0, 0.44);
         cursor: pointer;
         border-radius: 6px;
-        padding: 5px;
+        padding: 15px 5px 5px 5px;
+        position: relative;
+    }
+    .car-type {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        width: 100px;
+        background: #787c84;
+        background-image: linear-gradient(to left top, #428eff, #2ca5ec, #0457ef, #1291ff, #0b29ff);
+        color: #fff;
+        text-align: center;
+        border-radius: 10px;
+        top: -8px;
+        text-transform: uppercase;
     }
     // height: 200px;
     p {
@@ -30,6 +46,7 @@
     }
     p:last-child {
         border: none !important;
+        margin-bottom: 0;
     }
     .ans {
         p {

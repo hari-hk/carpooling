@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <label for="type">Type</label>
+            <select id="type">
+                <option disabled>-</option>
+                <option value="micro">Micro</option>
+                <option value="Mini">Mini</option>
+            </select>
+        </div>
+        <div class="col-4">
+            <label for="trip">Trip</label>
+            <select id="trip">
+                <option disabled>-</option>
+                <option value="local">Local</option>
+                <option value="out">Out station</option>
+            </select>
+        </div>
+        <div class="col-4">
+            <label for="plan">Plan</label>
+            <select id="plan">
+                <option disabled>-</option>
+                <option value="d">Day</option>
+                <option value="n">Night</option>
+                <option value="dn">Day and Night</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label for="hours">Trip Hours</label>
+            <input type="number" name="hours" id="hours">
+        </div>
+        <div class="col-4">
+            <label for="distance">Distance (in KM)</label>
+            <input type="number" name="distance" id="distance">
+        </div>
+        <div class="col-4">
+            <label for="mode">Mode</label>
+            <select id="mode">
+                <option disabled>-</option>
+                <option value="ac">AC</option>
+                <option value="nac">Non- AC</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label for="amount">Amount </label>
+            <input type="number" name="amount" id="amount">
+        </div>
+        <div class="col-4">
+            <label for="add">Additional Per KM </label>
+            <input type="number" name="add" id="add">
+        </div>
+        <div class="col-4">
+            <label for="wprice">Waiting Per Hour </label>
+            <input type="number" name="wprice" id="wprice">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 t-a-c">
+            <button class="submit" mat-button>Update</button>
+        </div>
+    </div>
+</div>
