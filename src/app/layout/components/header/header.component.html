@@ -9,6 +9,23 @@
     <button mat-button routerLink="/layout/drivers" routerLinkActive="active-route">Drivers</button>
     <button mat-button routerLink="/layout/sub-admin" routerLinkActive="active-route">Sub Admin</button>
     <button mat-button routerLink="/layout/tariff" routerLinkActive="active-route">Tariff</button>
+    <div class="search">
+      <input type="text" [(ngModel)]="searchQuery" (ngModelChange)="searchById($event)" placeholder="Search by ID">
+      <div class="search-list" *ngIf="showSearchResult">
+        <div class="card" (click)="navigateTo()" id="searchResult"><img class="icon"
+            src="../../../../assets/icon/phone.png" alt="">988776655</div>
+        <div class="card" (click)="navigateTo()" id="searchResult"><img class="icon"
+            src="../../../../assets/icon/user.png" alt="">#8474664</div>
+        <div class="card" (click)="navigateTo()" id="searchResult"><img class="icon"
+            src="../../../../assets/icon/user.png" alt="">#0019882</div>
+        <div class="card" (click)="navigateTo()" id="searchResult"><img class="icon"
+            src="../../../../assets/icon/vehicle.png" alt="">#VH77633
+        </div>
+        <div class="card" (click)="navigateTo()" id="searchResult"><img class="icon"
+            src="../../../../assets/icon/vehicle.png" alt="">#BH77333
+        </div>
+      </div>
+    </div>
   </div>
   <div class="right-item">
     <button mat-button> Documents <span class="baldge baldge-blue">7</span></button>

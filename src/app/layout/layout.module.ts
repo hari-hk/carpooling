@@ -7,6 +7,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MaterialModule } from '../shared/modules/material.module';
 import { AvailabilityComponent } from './pages/avalibility/avalibility.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -34,6 +35,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    FormsModule,
     MaterialModule
   ]
 })
