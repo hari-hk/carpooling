@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material.module';
-import { CommonPopUpComponent } from './shared/component/common-popup/common-popup.component'
+import { CommonPopUpComponent } from './shared/component/common-popup/common-popup.component';
 import { NotifyPopComponent } from './shared/component/notify-pop/notify-pop.component';
 
 @NgModule({
