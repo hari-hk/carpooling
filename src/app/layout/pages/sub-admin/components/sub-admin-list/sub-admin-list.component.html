@@ -14,16 +14,16 @@
     </div>
     <div class="list  container-fluid">
         <div class="row head">
-            <div class="col-2 ">Driver ID</div>
+            <div class="col-1 ">Driver ID</div>
             <div class="col-2 ">Name</div>
             <div class="col-2 ">Mobile</div>
             <div class="col-1 "> DOJ</div>
             <div class="col-2 ">E-mail</div>
             <div class="col-1 ">Status</div>
-            <div class="col-2  align-center">Action</div>
+            <div class="col-3  align-center">Actions</div>
         </div>
         <div class="row b-b" (click)="openDetail()">
-            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-1 m-auto">#91201822</div>
             <div class="col-2 m-auto ">
                 Muthin Kumar
             </div>
@@ -31,13 +31,14 @@
             <div class="col-1 m-auto "> 01-02-2019</div>
             <div class="col-2 m-auto ">test@carpooling.com</div>
             <div class="col-1 m-auto ">Online</div>
-            <div class="col-2 m-auto  align-center">
+            <div class="col-3 m-auto  align-center">
+                <button class="history" [routerLink]="['/layout/sub-admin/history']" mat-button>History</button>
                 <button class="delete" mat-button>Delete</button>
                 <button class="block" mat-button>Block</button>
             </div>
         </div>
         <div class="row b-b" (click)="openDetail()">
-            <div class="col-2 m-auto">#91201822</div>
+            <div class="col-1 m-auto">#91201822</div>
             <div class="col-2 m-auto ">
                 Jernin Kannan
             </div>
@@ -45,7 +46,8 @@
             <div class="col-1 m-auto "> 01-02-2019</div>
             <div class="col-2 m-auto ">test@carpooling.com</div>
             <div class="col-1 m-auto ">Offline</div>
-            <div class="col-2 m-auto  align-center">
+            <div class="col-3 m-auto  align-center">
+                <button class="history"  [routerLink]="['/layout/sub-admin/history']" mat-button>History</button>
                 <button class="delete" mat-button>Delete</button>
                 <button class="block" mat-button>Block</button>
             </div>

@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material.module';
 import { CommonPopUpComponent } from './shared/component/common-popup/common-popup.component';
 import { NotifyPopComponent } from './shared/component/notify-pop/notify-pop.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { NotifyPopComponent } from './shared/component/notify-pop/notify-pop.com
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
   entryComponents: [CommonPopUpComponent,
     NotifyPopComponent]

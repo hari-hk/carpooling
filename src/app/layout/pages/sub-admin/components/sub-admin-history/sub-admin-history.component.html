@@ -1,0 +1,81 @@
+<div class="container-fluid ">
+    <header>
+        <div class="toolbar">
+            <h2 class="title-main"> <button [routerLink]="['/layout/sub-admin/list']" mat-icon-button>
+                    <mat-icon>arrow_back</mat-icon>
+                </button> History</h2>
+
+            <div class="search">
+                <div class="date">
+                    <label for="from-date">From</label>
+                    <input [(ngModel)]="filter.fromDate" type="date" name="" id="">
+                </div>
+                <div class="date">
+                    <label for="from-date">To</label>
+                    <input [(ngModel)]="filter.toDate" type="date" name="" id="">
+                </div>
+                <button>Apply</button>
+            </div>
+
+        </div>
+        <div class="toolbar login-details">
+            <div class="row">
+                <div class="col-3">
+                    <h3 class="title"> #12312322 - Muthu Kumar <button mat-icon-button>
+                            <mat-icon>edit</mat-icon>
+                        </button></h3>
+                </div>
+                <div class="col-3">
+                    <h3 class="mobile">
+                        <a href="tel:+863666366663">8387363637 <button mat-icon-button>
+                                <mat-icon>call</mat-icon>
+                            </button></a>
+                    </h3>
+                </div>
+                <div class="col-3">
+                    <p>last login <span>JUN 15 2020, 12:30 pm</span></p>
+                </div>
+                <div class="col-3">
+                    <p>last logout <span>JUN 16 2020, 2:33 am</span></p>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="list  container-fluid">
+        <div class="row head">
+            <div class="col-1">Ride ID</div>
+            <div class="col-3">Source</div>
+            <div class="col-3">Destination</div>
+            <div class="col-2"> Ride Date</div>
+            <div class="col-1">Vehicle </div>
+            <div class="col-1">Distance</div>
+            <div class="col-1">Driver ID</div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-1 m-auto">#211121</div>
+            <div class="col-3 m-auto">Chittlapkkam, Tambaram, chennai</div>
+            <div class="col-3 m-auto">Guindy Railway station</div>
+            <div class="col-2 m-auto"> 12-JUL-2020 12:30 PM</div>
+            <div class="col-1 m-auto"> TN75L6111</div>
+            <div class="col-1 m-auto">45km</div>
+            <div class="col-1 m-auto">#123122</div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-1 m-auto">#211121</div>
+            <div class="col-3 m-auto">Chittlapkkam, Tambaram, chennai</div>
+            <div class="col-3 m-auto">Guindy Railway station</div>
+            <div class="col-2 m-auto"> 12-JUL-2020 12:30 PM</div>
+            <div class="col-1 m-auto"> TN75L6111</div>
+            <div class="col-1 m-auto">45km</div>
+            <div class="col-1 m-auto">#123122</div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+</div>

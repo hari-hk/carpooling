@@ -1,0 +1,57 @@
+<div class="container-fluid ">
+    <header>
+        <div class="toolbar">
+            <h2 class="title-main"> <button [routerLink]="['/layout/owners/details/99']" mat-icon-button>
+                    <mat-icon>arrow_back</mat-icon>
+                </button> History <span>#12312322 - Muthu Kumar</span></h2>
+
+            <div class="search">
+                <div class="date">
+                    <label for="from-date">From</label>
+                    <input [(ngModel)]="filter.fromDate" type="date" name="" id="">
+                </div>
+                <div class="date">
+                    <label for="from-date">To</label>
+                    <input [(ngModel)]="filter.toDate" type="date" name="" id="">
+                </div>
+                <button>Apply</button>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="list  container-fluid">
+        <div class="row head">
+            <div class="col-1">Ride ID</div>
+            <div class="col-3">Source</div>
+            <div class="col-3">Destination</div>
+            <div class="col-2"> Ride Date</div>
+            <div class="col-1">Driver </div>
+            <div class="col-1">Distance</div>
+            <div class="col-1">Driver ID</div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-1 m-auto">#211121</div>
+            <div class="col-3 m-auto">Chittlapkkam, Tambaram, chennai</div>
+            <div class="col-3 m-auto">Guindy Railway station</div>
+            <div class="col-2 m-auto"> 12-JUL-2020 12:30 PM</div>
+            <div class="col-1 m-auto"> Lawrence</div>
+            <div class="col-1 m-auto">45km</div>
+            <div class="col-1 m-auto">#123122</div>
+        </div>
+        <div class="row b-b" (click)="openDetail()">
+            <div class="col-1 m-auto">#211121</div>
+            <div class="col-3 m-auto">Chittlapkkam, Tambaram, chennai</div>
+            <div class="col-3 m-auto">Guindy Railway station</div>
+            <div class="col-2 m-auto"> 12-JUL-2020 12:30 PM</div>
+            <div class="col-1 m-auto"> saravanan</div>
+            <div class="col-1 m-auto">45km</div>
+            <div class="col-1 m-auto">#123122</div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+</div>

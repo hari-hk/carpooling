@@ -7,6 +7,8 @@ import { VehicleListComponent } from './components/vehicle-list/vehicle-list.com
 import { VehicleDetailComponent } from './components/vehicle-detail/vehicle-detail.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from 'src/app/shared/modules/material.module';
+import { VehicleHistoryComponent } from './components/vehicle-history/vehicle-history.component';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -15,6 +17,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'list', pathMatch: 'full' },
       { path: 'list', component: OwnerListComponent },
       { path: 'details', component: OwnerDetailComponent },
+      { path: 'history', component: VehicleHistoryComponent },
       { path: 'details/:id', component: OwnerDetailComponent }
     ]
   }
@@ -26,11 +29,13 @@ const routes: Routes = [
     OwnerListComponent,
     OwnerDetailComponent,
     VehicleListComponent,
-    VehicleDetailComponent],
+    VehicleDetailComponent,
+    VehicleHistoryComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   entryComponents: [VehicleDetailComponent]
 })
