@@ -11,6 +11,10 @@ export class AssignRideComponent implements OnInit {
     @Output() search = new EventEmitter();
     bookingType = '';
     passengerCount = 1;
+
+
+    lat = 51.678418;
+    lng = 7.809007;
     constructor() { }
 
     ngOnInit() { }

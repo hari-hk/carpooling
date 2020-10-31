@@ -7,6 +7,7 @@ import { DriverListComponent } from '../drivers/components/driver-list/driver-li
 import { DriverDetailComponent } from './components/driver-detail/driver-detail.component';
 import { DriverHistoryComponent } from './components/driver-history/driver-history.component';
 import { FormsModule } from '@angular/forms';
+import { DriverHistoryDetailComponent } from './components/driver-history-detail/driver-history-detail.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
       { path: 'list', component: DriverListComponent },
       { path: 'detail', component: DriverDetailComponent },
       { path: 'history', component: DriverHistoryComponent },
-      { path: 'detail/:id', component: DriverDetailComponent }
+      { path: 'detail/:id', component: DriverDetailComponent },
+      { path: 'history-detail', component: DriverHistoryDetailComponent }
     ]
   }]
 @NgModule({
@@ -23,7 +25,8 @@ const routes: Routes = [
     DriversComponent,
     DriverListComponent,
     DriverDetailComponent,
-    DriverHistoryComponent
+    DriverHistoryComponent,
+    DriverHistoryDetailComponent
   ],
   imports: [
     CommonModule,

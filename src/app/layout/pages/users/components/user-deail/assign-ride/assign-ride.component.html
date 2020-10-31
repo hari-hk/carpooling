@@ -2,6 +2,12 @@
     <div class="cell">
         <label for="source">Source</label>
         <input type="text" id="source" name="source">
+        <object tabindex="-1">
+            <agm-map [latitude]="lat" [longitude]="lng">
+                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+            </agm-map>
+        </object>
+
     </div>
     <div class="cell">
         <label for="destination">Destination</label>

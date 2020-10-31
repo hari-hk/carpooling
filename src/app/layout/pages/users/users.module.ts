@@ -12,6 +12,9 @@ import { AssignRideComponent } from './components/user-deail/assign-ride/assign-
 import { ConfirmBookingComponent } from './components/user-deail/confirm-booking/confirm-booking.component';
 import { FormsModule } from '@angular/forms';
 
+import { AgmCoreModule } from '@agm/core';
+
+
 const routes: Routes = [
   {
     path: '', component: UsersComponent, children: [
@@ -35,6 +38,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     MaterialModule,
+    AgmCoreModule,
     FormsModule
   ],
   entryComponents: [ConfirmBookingComponent]
